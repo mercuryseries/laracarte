@@ -23,6 +23,16 @@ get('about', [
 	'uses' => 'PagesController@about'
 ]);
 
+get('contact', [
+	'as'   => 'contact_path',
+	'uses' => 'PagesController@contact'
+]);
+
+post('contact', [
+	'as'   => 'contact_path',
+	'uses' => 'PagesController@postContact'
+]);
+
 
 // User routes...
 get('artisans', [

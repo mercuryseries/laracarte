@@ -26,7 +26,7 @@
             <li><a target="_blank" href="http://larachat.co">Larachat</a></li>
           </ul>
         </li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="{{ route('contact_path') }}">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         @if(Auth::check())

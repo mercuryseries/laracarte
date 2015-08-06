@@ -16,13 +16,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //Set user's longitude and latitude on saving
+        //Set user's longitude and latitude on saving (update and create)
         User::saving(function ($user) {
-            try{
+            try {
                 $response = GeoLocation::getGeocodeFromGoogle($user->address);
                 $user->latitude = $response->results[0]->geometry->location->lat;
                 $user->longitude = $response->results[0]->geometry->location->lng;
-            } catch(\Exception $e){
+            } catch (\Exception $e) {
                 throw new InvalidAddressException("Your address is invalid.");
             }
         });
