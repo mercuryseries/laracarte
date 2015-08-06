@@ -10,7 +10,7 @@
 			<div class="row">
 				@foreach ($group as $user)
 					<div class="col-md-1 col-sm-3 col-xs-4 text-center spaced">
-						<a href="{{ route('artisan_path', $user->username) }}"><img src="{{ Gravatar::src($user->email) }}" alt="{{ $user->name }}" class="img-rounded" /></a>
+						<a href="{{ route('profile_path', $user->username) }}"><img src="{{ Gravatar::src($user->email) }}" alt="{{ $user->name }}" class="img-rounded" /></a>
 					</div>
 				@endforeach
 			</div>

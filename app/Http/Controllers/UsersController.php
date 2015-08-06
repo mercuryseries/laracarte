@@ -3,15 +3,17 @@
 namespace Laracarte\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use JavaScript;
 use Laracarte\Http\Controllers\Controller;
 use Laracarte\Http\Requests;
 use Laracarte\User;
-use JavaScript;
 
 class UsersController extends Controller
 {
+
     /**
-     * Display a listing of the resource.
+     * Display a list of all artisans.
      *
      * @return Response
      */
@@ -24,41 +26,62 @@ class UsersController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the current user account page.
+     *
+     * @return Response
+     */
+    public function account()
+    {
+        $user = Auth::user();
+        return view('users.account', compact('user'));
+    }
+
+    /**
+     * Display the current user profile.
      *
      * @param  Laracarte\User  $user
      * @return Response
      */
-    public function show(User $user)
+    public function profile(User $user)
     {
         JavaScript::put([
             'latitude' => $user->latitude,
             'longitude' => $user->longitude
         ]);
 
-        return view('users.show', compact('user'));
+        return view('users.profile', compact('user'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the edit form.
      *
-     * @param  Laracarte\User  $user
      * @return Response
      */
-    public function edit(User $user)
+    public function edit_account()
     {
-        //
+        $user = Auth::user();
+        return view('users.edit', compact('user'));
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update a user account
      *
      * @param  Request  $request
-     * @param  Laracarte\User  $user
      * @return Response
      */
-    public function update(Request $request, User $user)
+    public function update_account(Request $request)
     {
-        //
+        dd('Updated!');
+    }
+
+
+    public function new_password()
+    {
+        return view('users.new_password');
+    }
+
+    public function update_password()
+    {
+        dd('Updated!');
     }
 }

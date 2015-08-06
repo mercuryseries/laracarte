@@ -30,7 +30,16 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         @if(Auth::check())
-          <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-rounded" src="{{ Gravatar::src(Auth::user()->email, 20) }}" /> {{ Auth::user()->name }} <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ route('account_path') }}">My profile</a></li>
+              <li><a href="{{ route('edit_account_path') }}">Edit profile</a></li>
+              <li><a href="{{ route('new_password_path') }}">Change my password</a></li>
+              <li class="divider"></li>
+              <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+            </ul>
+          </li>
         @else
           <li><a href="{{ url('/auth/login') }}">Login</a></li>
           <li><a href="{{ url('/auth/register') }}">Register</a></li>

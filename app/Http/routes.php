@@ -41,9 +41,36 @@ get('artisans', [
 ]);
 
 get('@{username}', [
-	'as'   => 'artisan_path',
-	'uses' => 'UsersController@show'
+	'as'   => 'profile_path',
+	'uses' => 'UsersController@profile'
 ]);
+
+Route::group(['prefix' => 'account', 'middleware' => 'auth'], function(){
+	get('/', [
+		'as'   => 'account_path',
+		'uses' => 'UsersController@account'
+	]);
+
+	get('/edit', [
+		'as'   => 'edit_account_path',
+		'uses' => 'UsersController@edit_account'
+	]);
+
+	patch('/', [
+		'as'   => 'account_path',
+		'uses' => 'UsersController@update_account'
+	]);
+
+	get('/set_password', [
+		'as'   => 'new_password_path',
+		'uses' => 'UsersController@new_password'
+	]);
+
+	patch('/set_password', [
+		'as'   => 'new_password_path',
+		'uses' => 'UsersController@update_password'
+	]);
+});
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');

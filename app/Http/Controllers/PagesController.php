@@ -20,7 +20,7 @@ class PagesController extends Controller
 
     	$users->map(function($user){
             $user->avatar = Gravatar::src($user->email);
-    		$user->profile_url = route('artisan_path', $user->username);
+    		$user->profile_url = route('profile_path', $user->username);
     	});
 
     	JavaScript::put(compact('users'));

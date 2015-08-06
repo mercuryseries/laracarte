@@ -149,6 +149,7 @@ return [
          */
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
         Laracasts\Utilities\JavaScript\JavascriptServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -197,7 +198,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Gravatar'  => Thomaswelton\LaravelGravatar\Facades\Gravatar::class
+        'Gravatar'  => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
+        'Form'      => Collective\Html\FormFacade::class,
 
     ],
 
