@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Laracarte
+        psr4_prefix: Laracarte
+        src_path: app
