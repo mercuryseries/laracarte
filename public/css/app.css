@@ -1,0 +1,27 @@
+.errors li {
+  color: #c84a48; }
+
+.home .navbar {
+  margin: 0; }
+
+html, body, #map-canvas {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+footer {
+  margin-top: 4em;
+  margin-bottom: 4em; }
+
+.spaced {
+  margin-bottom: 24px; }
+
+.special:hover, .special:focus {
+  text-decoration: none;
+  color: #aa3533; }
+
+.special {
+  text-decoration: none;
+  color: #c84a48; }
+
+/*# sourceMappingURL=app.css.map */
