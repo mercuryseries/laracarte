@@ -13,9 +13,15 @@
 
 $factory->define(Laracarte\User::class, function (Faker\Generator $faker) {
     return [
+        'username' => $faker->userName,
         'name' => $faker->name,
         'email' => $faker->email,
-        'password' => bcrypt(str_random(10)),
+        'password' => bcrypt('123456'),
+        'website' => $faker->url,
+        'github' => $faker->userName,
+        'address' => $faker->address,
+        'latitude' => $faker->latitude,
+        'longitude' => $faker->longitude,
         'remember_token' => str_random(10),
     ];
 });

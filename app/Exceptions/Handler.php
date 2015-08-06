@@ -3,8 +3,9 @@
 namespace Laracarte\Exceptions;
 
 use Exception;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Laracarte\Exceptions\InvalidAddressException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -39,6 +40,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        if ($e instanceof InvalidAddressException) {
+            return redirect()->back()
+                                ->withInput()
+                                ->withErrors(['address' => 'It seems that your address is invalid']);
+        }
+
         return parent::render($request, $e);
     }
 }

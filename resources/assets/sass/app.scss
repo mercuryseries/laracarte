@@ -1,2 +1,34 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "partials/colors";
 
+.errors li{
+	color: $darkenRed;
+}
+
+.home .navbar{
+	margin: 0;
+}
+
+html, body, #map-canvas {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+footer{
+	margin-top: 4em;
+	margin-bottom: 4em;
+}
+
+.spaced {
+	margin-bottom: 24px;
+}
+
+.special:hover, .special:focus{
+	text-decoration: none;
+	color: darken($darkenRed, 10%)
+}
+
+.special{
+	text-decoration: none;
+	color: $darkenRed;
+}

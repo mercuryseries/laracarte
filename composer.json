@@ -6,7 +6,10 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*"
+        "laravel/framework": "5.1.*",
+        "anthonymartin/geo-location": "^1.0",
+        "thomaswelton/laravel-gravatar": "^1.0",
+        "laracasts/utilities": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

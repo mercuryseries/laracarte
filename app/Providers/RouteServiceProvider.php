@@ -2,8 +2,9 @@
 
 namespace Laracarte\Providers;
 
-use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Routing\Router;
+use Laracarte\User;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -24,7 +25,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        //
+        $router->bind('username', function($username){
+            return User::whereUsername($username)->first();
+        });
 
         parent::boot($router);
     }
