@@ -81,7 +81,7 @@ class UsersController extends Controller
           $data['avatar'] = $this->saveImage($request->avatar);
 
           if($this->user->avatar){
-            $this->deleteCurrentAvatar($this->user);
+            $this->deleteCurrentAvatar($this->user->avatar);
           }
         }
 
@@ -138,8 +138,8 @@ class UsersController extends Controller
         );
     }
 
-    private function deleteCurrentAvatar(User $user)
+    private function deleteCurrentAvatar($avatar)
     {
-        Storage::delete(config('upload_paths.avatars') . $user->avatar);
+        Storage::delete(config('upload_paths.avatars') . $avatar);
     }
 }
