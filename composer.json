@@ -7,10 +7,16 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
+        "ext-gd": "^0.0.0",
         "anthonymartin/geo-location": "^1.0",
         "thomaswelton/laravel-gravatar": "^1.0",
         "laracasts/utilities": "^2.0",
-        "laravelcollective/html": "^5.1"
+        "laravelcollective/html": "^5.1",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "league/glide": "^0.3.5",
+        "michelf/php-markdown": "^1.5",
+        "ext-exif": "^0.0.0",
+        "laracasts/presenter": "^0.2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

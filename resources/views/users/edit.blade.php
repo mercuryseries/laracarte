@@ -7,13 +7,14 @@
             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                 <h3>Edit Profile &middot; {{ $user->name }}</h3>
 
-                {!! Form::model($user, ['route' => 'account_path', 'method' => 'PATCH']) !!}
+                {!! Form::model($user, ['route' => 'account_path', 'method' => 'PATCH', 'files' => true]) !!}
 
                     <div class="row">
                         <div class="col-md-6 col-md-push-6 text-right">
                             <div class="form-group {{ $errors->has('available_for_hire') ? 'has-error' : '' }}">
                                 <label class="control-label text-info">
-                                {!! Form::checkbox('available_for_hire', null, ['class' => 'form-control']) !!} I'm available for hire</label>
+                                {!! Form::hidden('available_for_hire', false) !!}
+                                {!! Form::checkbox('available_for_hire', true) !!} I'm available for hire</label>
                                 {!! $errors->first('available_for_hire', '<span class="text-danger">:message</span>') !!}
                             </div>
                         </div>
@@ -97,7 +98,7 @@
                     <br>
 
                     <fieldset class="hide-by-default">
-                        <legend class="text-warning"><i class="fa fa-file"></i> Please give us more informations about you <a href="#" class="text-warning slider-arrow"><span class="pull-right"><i class="fa fa-chevron-down"></i></span></a></legend>
+                        <legend class="text-warning"><i class="fa fa-file"></i> Tell us more about you <a href="#" class="text-warning slider-arrow"><span class="pull-right"><i class="fa fa-chevron-down"></i></span></a></legend>
 
                         <div class="row">
                             <div class="col-md-6">

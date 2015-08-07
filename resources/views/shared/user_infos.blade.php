@@ -21,8 +21,49 @@
 
         @if($user->available_for_hire)
           <ul class="list-inline">
-              <li><i class="fa fa-briefcase"></i> I´m available for hire!</li>
+              <li><i class="fa fa-briefcase"></i> I'm available for hire!</li>
           </ul>
         @endif
    </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-sm-3">
+    <img src="{{ $user->present()->profileImage(200) }}" alt="{{ $user->name }}" class="img-rounded" width="100%" />
+  </div>
+  <div class="col-sm-4">
+    <h3>Skills</h3>
+    <br>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ $user->laravel }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $user->laravel }}%;">
+        Laravel
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ $user->frontend }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $user->frontend }}%;">
+        Frontend
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ $user->backend }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $user->backend }}%;">
+        Backend
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ $user->mobile }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $user->mobile }}%;">
+        Mobile
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <h3>Biography</h3>
+    <br>
+    <div>
+      @if($user->bio)
+        {!! $user->present()->biography !!}
+      @endif
+    </div>
+  </div>
 </div>

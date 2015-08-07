@@ -2,6 +2,7 @@
 
 namespace Laracarte\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
 use Laracarte\Http\Requests\Request;
 
 class UpdatePasswordRequest extends Request
@@ -13,7 +14,7 @@ class UpdatePasswordRequest extends Request
      */
     public function authorize()
     {
-        return true;
+        return Auth::check();
     }
 
     /**

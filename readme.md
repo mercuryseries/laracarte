@@ -16,6 +16,7 @@ Features:
 - Bootstrap Integration
 - Gravatar Support
 - File Uploading
+- Glide integration for image manipulation
 - S3 storage for production
 - Mandrill Integration
 - Deployment on heroku

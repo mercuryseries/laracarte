@@ -143,6 +143,8 @@ return [
         Laracarte\Providers\AppServiceProvider::class,
         Laracarte\Providers\EventServiceProvider::class,
         Laracarte\Providers\RouteServiceProvider::class,
+        Laracarte\Providers\GlideServiceProvider::class,
+        Laracarte\Providers\ContentParserServiceProvider::class,
 
         /*
          * Vendors Service Providers...
