@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('github')->nullable();
             $table->string('twitter')->nullable();
             $table->string('avatar')->nullable();
-            $table->text('bio')->nullable();
+            $table->text('bio')->nullable()->default("");
             $table->string('address');
             $table->string('latitude');
             $table->string('longitude');
