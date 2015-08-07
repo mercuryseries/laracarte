@@ -63,6 +63,8 @@
     <div>
       @if($user->bio)
         {!! $user->present()->biography !!}
+      @else
+        <p>No biography specified.</p>
       @endif
     </div>
   </div>

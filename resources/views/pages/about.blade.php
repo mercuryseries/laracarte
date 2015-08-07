@@ -27,10 +27,13 @@
 		<ul>
 			<li>Laravel</li>
 			<li>Bootstrap</li>
+			<li>Amazone S3</li>
+			<li>Mandrill</li>
 			<li>Google Maps</li>
 			<li>Gravatar</li>
 			<li>Antony Martin's Geolocation Package</li>
-			<li>Heroku for Deployment</li>
+			<li>Michel Fortin's Markdown Parser Package</li>
+			<li>Heroku</li>
 		</ul>
 	</div>
 @stop
