@@ -4,7 +4,7 @@ I made this simple app "Laracarte" with Laravel 5.1 (kind of [laramap.com](http:
 
 Demo App: http://quiet-badlands-9458.herokuapp.com/
 
-![Screenshot](https://github.com/mercuryseries/laracarte/tree/master/public/img/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/mercuryseries/laracarte/master/public/img/screenshot.png)
 
 Features:
 
