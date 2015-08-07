@@ -2,7 +2,7 @@
 
 I made this simple app "Laracarte" with Laravel 5.1 (kind of [laramap.com](http://laramap.com) clone) for learning purposes.
 
-Demo App: http://quiet-badlands-9458.herokuapp.com/
+Demo App: http://laracarte.herokuapp.com/
 
 ![Screenshot](https://raw.githubusercontent.com/mercuryseries/laracarte/master/public/img/screenshot.png)
 
