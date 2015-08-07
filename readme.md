@@ -25,8 +25,7 @@ Features:
 
 - Allow a user to find all his neighbor artisans.
 - Allow users to publish tutorials.
-- Create a **Profile model** and a **ProfilesController** Controller in order to have better code.
-- Make a little bit of refactoring.
+- Make a little bit of refactoring by creating a **Profile model** and a **ProfilesController** Controller in order to improve our code quality.
 - Improve the User Interface.
 - Write some tests.
 

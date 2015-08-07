@@ -13,18 +13,18 @@
 			var middflefield_road_palo_alto = {
 				latitude: 37.4419,
 				longitude: -122.1419,
-			}
+			};
 
 			var myLatlng = new google.maps.LatLng(
-					middflefield_road_palo_alto.latitude,
-					middflefield_road_palo_alto.longitude
-				);
+				middflefield_road_palo_alto.latitude,
+				middflefield_road_palo_alto.longitude
+			);
 
 		  	var mapOptions = {
 		    	zoom: 2,
 		    	center: myLatlng,
 		    	mapTypeId: google.maps.MapTypeId.ROADMAP
-			}
+			};
 
 			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
