@@ -4,6 +4,8 @@ I made this simple app "Laracarte" with Laravel 5.1 (kind of [laramap.com](http:
 
 Demo App: http://quiet-badlands-9458.herokuapp.com/
 
+![Screenshot](https://github.com/mercuryseries/laracarte/tree/master/public/img/screenshot.png)
+
 Features:
 
 - Authentication System (with ability to edit your profile informations)
@@ -18,15 +20,15 @@ Features:
 - Mandrill Integration
 - Deployment on heroku
 
-Feel free to test it, view the source code and improve it.
-
-Let me know if you will be interested by a video tutorial where i will show each step that i gone through while building this application.
-
 
 ### TODO:
 
 - Allow a user to find all his neighbor artisans.
-- Create a Profile model and a Profile Controller Controller.
+- Create a **Profile model** and a **ProfilesController** Controller.
 - Make a little bit of refactoring.
 - Improve the User Interface.
 - Write some tests.
+
+Feel free to test it, view the source code and improve it.
+
+Let me know if you will be interested by a video tutorial where i will show each step that i gone through while building this application.
