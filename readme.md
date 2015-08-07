@@ -15,8 +15,18 @@ Features:
 - Gravatar Support
 - File Uploading
 - S3 storage for production
+- Mandrill Integration
 - Deployment on heroku
 
 Feel free to test it, view the source code and improve it.
 
 Let me know if you will be interested by a video tutorial where i will show each step that i gone through while building this application.
+
+
+### TODO:
+
+- Allow a user to find all his neighbor artisans.
+- Create a Profile model and a Profile Controller Controller.
+- Make a little bit of refactoring.
+- Improve the User Interface.
+- Write some tests.
