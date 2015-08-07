@@ -8,7 +8,7 @@
 		<p>Laracarte is a clone of <a target="_blank" href="http://laramap.com">Laramap.com</a> created by <a target="_blank" href="http://twitter.com/fwartner">@fwartner</a>.</p>
 		<div class="row">
 			<div class="col-md-6">
-			<p class="alert alert-warning"><strong>This app has been built by <a target="_blank" href="http://twitter.com/mercuryseries">@mercuryseries</a> for learning purposes.</strong></p>
+			<p class="alert alert-warning"><strong><i class="fa fa-warning"></i> This app has been built for learning purposes.</strong></p>
 			</div>
 		</div>
 
