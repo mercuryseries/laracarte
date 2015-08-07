@@ -19,15 +19,15 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('username') ? 'has-error' : '' }}">
-                                        <label class="control-label"><span class="text-danger">*</span> Username</label>
-                                        <input type="text" name="username" value="{{ old('username') }}" class="form-control">
+                                        <label class="control-label" for="username"><span class="text-danger">*</span> Username</label>
+                                        <input type="text" name="username" value="{{ old('username') }}" id="username" class="form-control">
                                         {!! $errors->first('username', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-                                        <label class="control-label"><span class="text-danger">*</span> Name</label>
-                                        <input type="name" name="name" value="{{ old('name') }}" class="form-control">
+                                        <label class="control-label" for="name"><span class="text-danger">*</span> Name</label>
+                                        <input type="name" name="name" id="name" value="{{ old('name') }}" class="form-control">
                                         {!! $errors->first('name', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                 </div>
@@ -36,16 +36,16 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-                                        <label class="control-label"><span class="text-danger">*</span> Email Address</label>
-                                        <input type="email" name="email" value="{{ old('email') }}" class="form-control">
+                                        <label class="control-label" for="email"><span class="text-danger">*</span> Email Address</label>
+                                        <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control">
                                         {!! $errors->first('email', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('address') ? 'has-error' : '' }}">
-                                        <label class="control-label"><span class="text-danger">*</span> Address</label>
+                                        <label class="control-label" for="address"><span class="text-danger">*</span> Address</label>
                                         <span class="help-text">(for the map)</span>
-                                        <input type="text" name="address" value="{{ old('address') }}" id="address" class="form-control">
+                                        <input type="text" name="address" id="address" value="{{ old('address') }}" id="address" class="form-control">
                                         {!! $errors->first('address', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                 </div>
@@ -54,14 +54,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('password') ? 'has-error' : '' }}">
-                                        <label class="control-label"><span class="text-danger">*</span>  Password</label>
+                                        <label class="control-label" for="password"><span class="text-danger">*</span>  Password</label>
                                         <input type="password" name="password" id="password" class="form-control">
                                         {!! $errors->first('password', '<span class="text-danger">:message</span>') !!}
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('password_confirmation') ? 'has-error' : '' }}">
-                                        <label class="control-label"><span class="text-danger">*</span>  Password Confirmation</label>
+                                        <label class="control-label" for="password_confirmation"><span class="text-danger">*</span>  Password Confirmation</label>
                                         <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
                                         {!! $errors->first('password_confirmation', '<span class="text-danger">:message</span>') !!}
                                     </div>
@@ -71,7 +71,7 @@
                             <div class="row">
                                 <div class="col-md-6 {{ $errors->has('website') ? 'has-error' : '' }}">
                                     <div class="form-group">
-                                        <label class="control-label">Website / Blog</label>
+                                        <label class="control-label" for="website">Website / Blog</label>
                                         <span class="help-text">(Starting with http:// or https://)</span>
                                         <input type="url" name="website" id="website" class="form-control">
                                         {!! $errors->first('website', '<span class="text-danger">:message</span>') !!}
@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group {{ $errors->has('github') ? 'has-error' : '' }}">
-                                        <label class="control-label">Github Profile</label>
+                                        <label class="control-label" for="github">Github Profile</label>
                                         <span class="help-text">(Starting with http:// or https://)</span>
                                         <input type="url" name="github" id="github" class="form-control">
                                         {!! $errors->first('github', '<span class="text-danger">:message</span>') !!}

@@ -4,14 +4,15 @@ namespace Laracarte\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use JavaScript;
 use Laracarte\Http\Controllers\Controller;
 use Laracarte\Http\Requests;
+use Laracarte\Http\Requests\UpdatePasswordRequest;
 use Laracarte\User;
 
 class UsersController extends Controller
 {
-
     /**
      * Display a list of all artisans.
      *
@@ -80,8 +81,26 @@ class UsersController extends Controller
         return view('users.new_password');
     }
 
-    public function update_password()
+    public function update_password(UpdatePasswordRequest $request)
     {
-        dd('Updated!');
+        if ($this->theCurrentPasswordProvidedIsCorrect($request)) {
+
+            $this->updateUserPassword($request);
+            session()->flash('success-message', 'Your password has been successfully updated.');
+            return redirect()->back();
+
+        } else {
+            return redirect()->back()->withErrors(['current_password' => 'Your current password is incorrect.']);
+        }
+    }
+
+    private function theCurrentPasswordProvidedIsCorrect($request)
+    {
+        return Hash::check($request->current_password, $request->user()->password);
+    }
+
+    private function updateUserPassword($request)
+    {
+        Auth::user()->update(['password' => bcrypt($request->password)]);
     }
 }

@@ -19,12 +19,12 @@
                             {!! csrf_field() !!}
 
                             <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-                                <label class="control-label">Email</label>
-                                <input type="email" name="email" value="{{ old('email') }}" class="form-control">
+                                <label class="control-label" for="email">Email</label>
+                                <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control">
                             </div>
 
                             <div class="form-group {{ $errors->has('password') ? 'has-error' : '' }}">
-                                <label class="control-label">Password</label>
+                                <label class="control-label" for="password">Password</label>
                                 <input type="password" name="password" id="password" class="form-control">
                             </div>
 
@@ -38,7 +38,7 @@
                             </div>
                         </form>
 
-                        <a href="{{ url('/auth/register') }}">New on Laracarte? Create an account !</a>
+                        <a href="{{ url('/password/email') }}">Forgot your password?</a> | <a href="{{ url('/auth/register') }}">New on Laracarte? Create an account !</a>
                     </div>
                 </div>
             </div>

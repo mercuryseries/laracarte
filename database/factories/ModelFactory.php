@@ -18,10 +18,16 @@ $factory->define(Laracarte\User::class, function (Faker\Generator $faker) {
         'email' => $faker->email,
         'password' => bcrypt('123456'),
         'website' => $faker->url,
-        'github' => $faker->userName,
-        'address' => $faker->address,
+        'github' => 'http://github.com/' . $faker->userName,
+        'twitter' => 'http://twitter.com/' . $faker->userName,
+        'address' => $faker->streetAddress,
         'latitude' => $faker->latitude,
         'longitude' => $faker->longitude,
+        'available_for_hire' => $faker->boolean(50),
+        'laravel' => $faker->numberBetween(1, 100),
+        'frontend' => $faker->numberBetween(1, 100),
+        'backend' => $faker->numberBetween(1, 100),
+        'mobile' => $faker->numberBetween(1, 100),
         'remember_token' => str_random(10),
     ];
 });

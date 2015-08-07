@@ -20,7 +20,7 @@
                     </div>
 
                     <fieldset>
-                        <legend><i class="fa fa-lock"></i> Personal Informations</legend>
+                        <legend class="text-warning"><i class="fa fa-lock"></i> Personal Informations <a href="#" class="text-warning slider-arrow"><span class="pull-right"><i class="fa fa-chevron-up"></i></span></a></legend>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
@@ -55,30 +55,13 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group {{ $errors->has('password') ? 'has-error' : '' }}">
-                                    {!! Form::label('password', 'Password', ['class' => 'control-label']) !!}
-                                    {!! Form::password('password', ['class' => 'form-control']) !!}
-                                    {!! $errors->first('password', '<span class="text-danger">:message</span>') !!}
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group {{ $errors->has('password_confirmation') ? 'has-error' : '' }}">
-                                    {!! Form::label('password_confirmation', 'Password Confirmation', ['class' => 'control-label']) !!}
-                                    {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
-                                    {!! $errors->first('password_confirmation', '<span class="text-danger">:message</span>') !!}
-                                </div>
-                            </div>
-                        </div>
                     </fieldset>
 
                     <br>
                     <br>
 
-                    <fieldset>
-                        <legend><i class="fa fa-globe"></i> Where can we find you?</legend>
+                    <fieldset class="hide-by-default">
+                        <legend class="text-warning"><i class="fa fa-globe"></i> Where can we find you on the web? <a href="#" class="text-warning slider-arrow"><span class="pull-right"><i class="fa fa-chevron-down"></i></span></a></legend>
                         <div class="row">
                             <div class="col-md-6 {{ $errors->has('website') ? 'has-error' : '' }}">
                                 <div class="form-group">
@@ -113,8 +96,8 @@
                     <br>
                     <br>
 
-                    <fieldset>
-                        <legend><i class="fa fa-file"></i> Please give us more informations about you</legend>
+                    <fieldset class="hide-by-default">
+                        <legend class="text-warning"><i class="fa fa-file"></i> Please give us more informations about you <a href="#" class="text-warning slider-arrow"><span class="pull-right"><i class="fa fa-chevron-down"></i></span></a></legend>
 
                         <div class="row">
                             <div class="col-md-6">
@@ -138,32 +121,32 @@
                     <br>
                     <br>
 
-                    <fieldset>
-                        <legend><i class="fa fa-star"></i> How strong are you?</legend>
+                    <fieldset class="hide-by-default">
+                        <legend class="text-warning"><i class="fa fa-star"></i> How strong are you? <a href="#" class="text-warning slider-arrow"><span class="pull-right"><i class="fa fa-chevron-down"></i></span></a></legend>
 
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group">
                                     {!! Form::label('laravel', 'Laravel', ['class' => 'control-label']) !!}
-                                    {!! Form::selectRange('laravel', 1, 100) !!}
+                                    {!! Form::selectRange('laravel', 1, 100, null, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     {!! Form::label('frontend', 'Frontend', ['class' => 'control-label']) !!}
-                                    {!! Form::selectRange('frontend', 1, 100) !!}
+                                    {!! Form::selectRange('frontend', 1, 100, null, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     {!! Form::label('backend', 'Backend', ['class' => 'control-label']) !!}
-                                    {!! Form::selectRange('backend', 1, 100) !!}
+                                    {!! Form::selectRange('backend', 1, 100, null, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     {!! Form::label('mobile', 'Mobile', ['class' => 'control-label']) !!}
-                                    {!! Form::selectRange('mobile', 1, 100) !!}
+                                    {!! Form::selectRange('mobile', 1, 100, null, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                         </div>
