@@ -24,7 +24,8 @@ Features:
 ### TODO:
 
 - Allow a user to find all his neighbor artisans.
-- Create a **Profile model** and a **ProfilesController** Controller.
+- Allow users to publish tutorials.
+- Create a **Profile model** and a **ProfilesController** Controller in order to have better code.
 - Make a little bit of refactoring.
 - Improve the User Interface.
 - Write some tests.
