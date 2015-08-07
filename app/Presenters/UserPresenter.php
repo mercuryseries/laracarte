@@ -2,7 +2,7 @@
 
 namespace Laracarte\Presenters;
 
-use Laracarte\ContentParser\ContentParser;
+use Laracarte\ContentParser\ContentParserFacade as ContentParser;
 use Laracasts\Presenter\Presenter;
 use Thomaswelton\LaravelGravatar\Facades\Gravatar;
 
@@ -29,6 +29,6 @@ class UserPresenter extends Presenter
      */
     public function biography()
     {
-        return app(ContentParser::class)->transform($this->entity->bio);
+        return ContentParser::transform($this->entity->bio);
     }
 }

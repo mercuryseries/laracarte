@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
                 $user->latitude = $response->results[0]->geometry->location->lat;
                 $user->longitude = $response->results[0]->geometry->location->lng;
             } catch (\Exception $e) {
-                throw new InvalidAddressException("Your address is invalid.");
+                throw new InvalidAddressException("It seems that your address is invalid");
                 // return false;
             }
         });

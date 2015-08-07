@@ -43,7 +43,7 @@ class Handler extends ExceptionHandler
         if ($e instanceof InvalidAddressException) {
             return redirect()->back()
                             ->withInput()
-                            ->withErrors(['address' => 'It seems that your address is invalid']);
+                            ->withErrors(['address' => $e->getMessage()]);
         }
 
         return parent::render($request, $e);
