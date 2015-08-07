@@ -80,7 +80,7 @@ class UsersController extends Controller
         if(isset($data['avatar'])){
           $data['avatar'] = $this->saveImage($request->avatar);
 
-          if($this->user->avatar){
+          if(isset($this->user->avatar)){
             $this->deleteCurrentAvatar($this->user->avatar);
           }
         }
