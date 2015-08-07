@@ -13,8 +13,8 @@
                         <div class="col-md-6 col-md-push-6 text-right">
                             <div class="form-group {{ $errors->has('available_for_hire') ? 'has-error' : '' }}">
                                 <label class="control-label text-info">
-                                {!! Form::hidden('available_for_hire', false) !!}
-                                {!! Form::checkbox('available_for_hire', true) !!} I'm available for hire</label>
+                                {!! Form::hidden('available_for_hire', 0) !!}
+                                {!! Form::checkbox('available_for_hire', 1) !!} I'm available for hire</label>
                                 {!! $errors->first('available_for_hire', '<span class="text-danger">:message</span>') !!}
                             </div>
                         </div>
