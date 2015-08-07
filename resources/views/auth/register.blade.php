@@ -93,7 +93,7 @@
 
                         </form>
 
-                        <a href="{{ url('/auth/login') }}">Already an account? Log in!</a>
+                        <a href="{{ url('/auth/login') }}">Already have an account? Log in!</a>
                     </div>
                 </div>
             </div>
