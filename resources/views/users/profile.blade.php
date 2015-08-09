@@ -10,7 +10,7 @@
 	</div>
 @stop
 
-@section('javascripts')
+@section('scripts.footer')
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	<script type="text/javascript">
 		function initialize() {

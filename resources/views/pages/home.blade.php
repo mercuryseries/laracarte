@@ -5,7 +5,7 @@
 	<div id="map-canvas" style="width:100%; height:640px;"></div>
 @stop
 
-@section('javascripts')
+@section('scripts.footer')
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	<script src="https://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer_compiled.js"></script>
 	<script type="text/javascript">

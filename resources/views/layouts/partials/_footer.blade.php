@@ -4,6 +4,3 @@
 		<p class="text-center"><b>This app has been built for learning purposes.</b></p>
 	</footer>
 </div>
-
-<script src="{{ elixir('js/all.js') }}"></script>
-@yield('javascripts')

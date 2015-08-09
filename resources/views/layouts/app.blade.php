@@ -6,7 +6,7 @@
 	<title>{{ isset($title) ?  $title . ' | ' : '' }} Laracarte - List of artisans</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="{{ elixir('css/all.css') }}">
-	@yield('head')
+	@yield('scripts.header')
 </head>
 <body
 	@if(Route::currentRouteName() == "root_path")
@@ -20,5 +20,8 @@
 	@yield('content')
 
 	@include('layouts/partials/_footer')
+
+	<script src="{{ elixir('js/all.js') }}"></script>
+	@yield('scripts.footer')
 </body>
 </html>

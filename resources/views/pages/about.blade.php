@@ -23,7 +23,7 @@
 		<hr>
 
 		<h2>Which tools and services are used in Laracarte?</h2>
-		<p>Basically it's built on Laravel & Bootstrap. But there's a bunch of services used for email and other sections.</p>
+		<p>Basically it's built on Laravel &amp; Bootstrap. But there's a bunch of services used for email and other sections.</p>
 		<ul>
 			<li>Laravel</li>
 			<li>Bootstrap</li>

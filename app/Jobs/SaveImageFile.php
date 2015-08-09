@@ -35,7 +35,7 @@ class SaveImageFile extends Job implements SelfHandling
     }
 
     private function generateRandomFileName(){
-        return str_random(20) . '.' . $this->file->getClientOriginalExtension();
+        return time() . str_random(20) . '.' . $this->file->getClientOriginalExtension();
     }
 
     private function saveImage($fileName){

@@ -9,6 +9,8 @@ use Thomaswelton\LaravelGravatar\Facades\Gravatar;
 class UserPresenter extends Presenter
 {
     /**
+     * Diplay the user's profile image
+     *
      * @return string
      */
     public function profileImage($width = null)
@@ -24,7 +26,9 @@ class UserPresenter extends Presenter
         return Gravatar::src($this->entity->email, $width);
     }
 
-     /**
+    /**
+     * Display the user's biography
+     *
      * @return string
      */
     public function biography()

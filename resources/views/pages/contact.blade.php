@@ -39,6 +39,6 @@
 	</div>
 @stop
 
-@section('head')
+@section('scripts.header')
 	<script async src="https://assets.helpful.io/assets/widget.js"></script>
 @stop
