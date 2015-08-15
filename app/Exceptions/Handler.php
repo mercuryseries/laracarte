@@ -41,7 +41,7 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $e)
     {
         if ($e instanceof InvalidAddressException) {
-            return redirect()->back()
+            return redirect()->route('register_path')
                             ->withInput()
                             ->withErrors(['address' => $e->getMessage()]);
         }

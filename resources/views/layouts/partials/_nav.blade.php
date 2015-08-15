@@ -31,7 +31,7 @@
       <ul class="nav navbar-nav navbar-right">
         @if(Auth::check())
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-rounded" src="{{ Auth::user()->present()->profileImage(20)  }}" /> {{ Auth::user()->name }} <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-rounded" src="{{ Auth::user()->present()->profileImage(20)  }}" width="20" /> {{ Auth::user()->name }} <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="{{ route('account_path') }}">My profile</a></li>
               <li><a href="{{ route('edit_account_path') }}">Edit profile</a></li>

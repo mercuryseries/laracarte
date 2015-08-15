@@ -2,12 +2,14 @@
 
 namespace Laracarte\Http\Controllers\Auth;
 
-use Laracarte\User;
-use Validator;
-use Laracarte\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Exception;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Support\Facades\Auth;
+use Laracarte\Http\Controllers\Controller;
+use Laracarte\User;
 use Socialite;
+use Validator;
 
 class AuthController extends Controller
 {
@@ -91,8 +93,41 @@ class AuthController extends Controller
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('github')->user();
+        try {
+            $user = Socialite::driver('github')->user();
+        } catch (Exception $e) {
+            return redirect('auth/github');
+        }
 
-        dd($user->token);
+        $authUser = $this->findOrCreateUser($user);
+
+        Auth::login($authUser, true);
+
+        return redirect($this->redirectPath());
+    }
+
+    /**
+     * Return user if exists; create and return if doesn't
+     *
+     * @param $githubUser
+     * @return User
+     */
+    private function findOrCreateUser($githubUser)
+    {
+        if ($authUser = User::where('github_id', $githubUser->id)->first()) {
+            return $authUser;
+        }
+
+        return User::create([
+            'username'  => $githubUser->nickname,
+            'github_id' => $githubUser->id,
+            'name'      => $githubUser->name,
+            'email'     => $githubUser->email,
+            'website'   => $githubUser->user['blog'] ?: null,
+            'github'    => $githubUser->nickname,
+            'address'   => $githubUser->user['location'] ?: null,
+            'avatar'    => $githubUser->avatar ?: null,
+            'bio'       => $githubUser->user['bio'] ?: '',
+        ]);
     }
 }

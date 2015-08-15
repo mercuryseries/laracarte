@@ -16,6 +16,11 @@ class UserPresenter extends Presenter
     public function profileImage($width = null)
     {
         if (isset($this->entity->avatar)) {
+
+            if(filter_var($this->entity->avatar, FILTER_VALIDATE_URL)){
+                return $this->entity->avatar;
+            }
+
             if (!is_null($width)) {
                 $width = "?w=" . $width;
             }
