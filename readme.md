@@ -11,6 +11,7 @@ Features:
 - Authentication System (with ability to edit your profile informations)
 - Geolocation by address
 - Google Maps Integration
+- Socialite Integration
 - Markdown Parser
 - Simple pagination
 - Bootstrap Integration
