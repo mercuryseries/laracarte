@@ -88,7 +88,8 @@
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-default btn-block">Register</button>
+                                <a href="/auth/github" class="btn btn-primary">Se connecter avec Github</a>
+                                <button type="submit" class="btn btn-default">Register</button>
                             </div>
 
                         </form>

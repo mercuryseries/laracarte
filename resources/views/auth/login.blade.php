@@ -33,8 +33,12 @@
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-default">Login</button>
+                                <a href="/auth/github" class="btn btn-default">Se connecter avec Github</a>
                                 <a href="{{ url('/password/email') }}" class="btn btn-primary">Reset password</a>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-block btn-default">Login</button>
                             </div>
                         </form>
 

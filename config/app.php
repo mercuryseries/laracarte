@@ -152,6 +152,7 @@ return [
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
         Laracasts\Utilities\JavaScript\JavascriptServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -202,6 +203,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Gravatar'  => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
         'Form'      => Collective\Html\FormFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

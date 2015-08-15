@@ -16,6 +16,11 @@ get('img/{path}', function(League\Glide\Server $server, Illuminate\Http\Request 
 	$server->outputImage($request);
 })->where('path', '.*');
 
+
+// OAuth Authentication Routes...
+get('auth/github', 'Auth\AuthController@redirectToProvider');
+get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
+
 // Static Pages Routes...
 get('/', [
 	'as'   => 'root_path',
