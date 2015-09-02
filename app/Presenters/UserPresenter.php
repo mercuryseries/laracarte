@@ -51,7 +51,7 @@ class UserPresenter extends Presenter
     {
         $website = $this->entity->website;
 
-        if( ! Str::startsWith($website, ['http', 'https'])){
+        if( ! Str::startsWith($website, ['http://', 'https://'])){
             $website = 'http://' . $website;
         }
 
