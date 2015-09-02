@@ -1,6 +1,6 @@
 ## Laracarte (A kind of [Laramap.com](http://laramap.com) Clone)
 
-I made this simple app "Laracarte" with Laravel 5.1 (kind of [laramap.com](http://laramap.com) clone) for learning purposes.
+I made this simple app "Laracarte" with Laravel 5.1 (kind of [laramap.com](https://laramap.com) clone) for learning purposes.
 
 Demo App: http://laracarte.herokuapp.com/
 
@@ -18,7 +18,7 @@ Features:
 - Gravatar Support
 - File Uploading
 - Glide integration for image manipulation
-- S3 storage for production
+- Amazone S3 storage for production
 - Mandrill Integration
 - Deployment on heroku
 
