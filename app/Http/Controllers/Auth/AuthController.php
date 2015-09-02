@@ -124,7 +124,7 @@ class AuthController extends Controller
             'name'      => $githubUser->name,
             'email'     => $githubUser->email,
             'website'   => $githubUser->user['blog'] ?: null,
-            'github'    => $githubUser->nickname,
+            'github'    => 'https://github.com/' . $githubUser->nickname,
             'address'   => $githubUser->user['location'] ?: null,
             'avatar'    => $githubUser->avatar ?: null,
             'bio'       => $githubUser->user['bio'] ?: '',
