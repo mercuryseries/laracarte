@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
                 $user->latitude = $response->results[0]->geometry->location->lat;
                 $user->longitude = $response->results[0]->geometry->location->lng;
             } catch (\Exception $e) {
-                throw new InvalidAddressException("It seems that your address is missing or invalid. Please don't forget to set it on your Github profile if you are using Github Authentication.");
+                throw new InvalidAddressException("It seems that your address is missing or invalid. (Please don't forget to set it on your Github profile if you are using Github Authentication)");
                 // return false;
             }
         });
