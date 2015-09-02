@@ -7,7 +7,7 @@
 	<div class="col-md-6 text-right">
         <ul class="list-inline">
         	@if($user->github)
-            	<li><a target="_blank" href="{{ $user->github }}"><i class="fa fa-github"></i> GitHub</a></li>
+            	<li><a target="_blank" href="https://github.com/{{ $user->github }}"><i class="fa fa-github"></i> GitHub</a></li>
             @endif
 
             @if($user->website)
@@ -15,7 +15,7 @@
            	@endif
 
             @if($user->twitter)
-              <li><a target="_blank" href="{{ $user->twitter }}"><i class="fa fa-twitter"></i> Twitter</a></li>
+              <li><a target="_blank" href="https://twitter.com/{{ $user->twitter }}"><i class="fa fa-twitter"></i> Twitter</a></li>
             @endif
        	</ul>
 
