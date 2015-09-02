@@ -2,6 +2,7 @@
 
 namespace Laracarte\Presenters;
 
+use Illuminate\Support\Str;
 use Laracarte\ContentParser\ContentParserFacade as ContentParser;
 use Laracasts\Presenter\Presenter;
 use Thomaswelton\LaravelGravatar\Facades\Gravatar;
@@ -39,5 +40,21 @@ class UserPresenter extends Presenter
     public function biography()
     {
         return ContentParser::transform($this->entity->bio);
+    }
+
+    /**
+     * Display the user's biography
+     *
+     * @return string
+     */
+    public function website()
+    {
+        $website = $this->entity->website;
+
+        if( ! Str::startsWith($website, ['http', 'https'])){
+            $website = 'http://' . $website;
+        }
+
+        return $website;
     }
 }

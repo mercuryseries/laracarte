@@ -11,7 +11,7 @@
             @endif
 
             @if($user->website)
-            	<li><a target="_blank" href="{{ $user->website }}"><i class="fa fa-globe"></i> Website / Blog</a></li>
+            	<li><a target="_blank" href="{{ $user->present()->website }}"><i class="fa fa-globe"></i> Website / Blog</a></li>
            	@endif
 
             @if($user->twitter)
