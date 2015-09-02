@@ -5,7 +5,7 @@
 	<div class="container">
 		<h2>What is Laracarte?</h2>
 
-		<p>Laracarte is a clone app of <a target="_blank" href="http://laramap.com">Laramap.com</a>.</p>
+		<p>Laracarte is a clone app of <a target="_blank" href="https://laramap.com">Laramap.com</a>.</p>
 		<div class="row">
 			<div class="col-md-6">
 			<p class="alert alert-warning"><strong><i class="fa fa-warning"></i> This app has been built by <a target="_blank" href="http://twitter.com/mercuryeries">@mercuryeries</a> for learning purposes.</strong></p>
@@ -18,7 +18,7 @@
 
 		<h2>What is Laramap?</h2>
 		<p>Laramap is the website by which Laracarte was inspired :).</p>
-		<p>More info <a target="_blank" href="http://laramap.com/page/about">here</a>.</p>
+		<p>More info <a target="_blank" href="http://laramap.com/p/about">here</a>.</p>
 
 		<hr>
 
@@ -27,7 +27,7 @@
 		<ul>
 			<li>Laravel</li>
 			<li>Bootstrap</li>
-			<li>Amazone S3</li>
+			<li>Amazon S3</li>
 			<li>Mandrill</li>
 			<li>Google Maps</li>
 			<li>Gravatar</li>
