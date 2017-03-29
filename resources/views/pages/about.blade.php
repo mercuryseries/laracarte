@@ -27,7 +27,7 @@
 		<ul>
 			<li>Laravel</li>
 			<li>Bootstrap</li>
-			<li>Amazone S3</li>
+			<li>Amazon S3</li>
 			<li>Mandrill</li>
 			<li>Google Maps</li>
 			<li>Gravatar</li>
