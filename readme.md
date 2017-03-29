@@ -18,7 +18,7 @@ Features:
 - Gravatar Support
 - File Uploading
 - Glide integration for image manipulation
-- Amazone S3 storage for production
+- Amazon S3 storage for production
 - Mandrill Integration
 - Deployment on heroku
 
